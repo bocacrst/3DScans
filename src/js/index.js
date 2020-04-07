@@ -1,3 +1,5 @@
 import num from './test';
 
-console.log(`I imported ${num} cacat`);
+const x =23;
+
+console.log(`I imported ${num} cacat var x is ${x}`);
