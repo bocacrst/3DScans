@@ -1,0 +1,258 @@
+/*color: #f1bc0f*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    background-color:white;
+    color: black;
+    font-family: 'Montserrat', 'Arial', sans-serif;
+  /*  font-family: 'Lato', 'Arial', sans-serif;*/
+    font-size: 20px;
+    font-weight: 300;
+    text-rendering: optimizeLegibility;
+}
+.row{
+    max-width: 1140px;
+    margin: 0 auto;
+}
+section{
+    padding: 80px 0;
+}
+/*---------HEADINGS----------*/
+
+header{
+    background-image: linear-gradient(rgb(0,0,0,0.73),rgb(0,0,0,0.73)), url(../img/alberto-castillo-q-mx4mSkK9zeo-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+.hero-text{
+    position: absolute;
+    width: 1140px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+h1,
+h2,
+h3{
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+h1{
+    margin: 0;
+    margin-bottom: 20px;
+    color: white;
+    font-size: 290%;
+    word-spacing: 10px;
+    
+}
+h2{  
+    text-align: center;
+    margin-bottom: 80px;
+    margin-top: 50px;
+    font-size: 200%;
+}
+h2::after{
+    display: block;
+    height: 2px;
+    background-color: #f1bc0f;
+    content: " ";
+    width: 100px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+h3{
+    text-align: center;
+    margin: 20px 0;
+    font-size: 130%;
+}
+p{
+    text-align: justify;
+    line-height: 145%;
+}
+
+/*---------BUTTONS----------*/
+
+.btn:link,
+.btn:visited,
+button[type=submit]{
+    cursor: pointer;
+    display: inline-block;
+    font-size: 120%;
+    font-weight: 400;
+    padding: 13px 25px;
+    color: black;
+    text-decoration: none;
+    border: 2px solid #f1bc0f;
+    border-radius: 50px;
+}
+.btn-full:link,
+.btn-full:visited,
+button[type=submit]{
+    margin-right: 10px;
+    background-color:#f1bc0f ;  
+}
+.btn-ghost:link,
+.btn-ghost:visited{
+    color: #f1bc0f;
+}
+.btn:hover,
+.btn:active,
+button[type=submit]:hover,
+button[type=submit]:active{
+    color: white;
+    background-color:#eba30a ;
+    border: 2px solid #eba30a;
+}
+.btn-full:hover,
+.btn-full:active,
+button[type=submit]:hover,
+button[type=submit]:active{
+    transition: color 0.3s, background-color 0.3s, border 0.3s;
+}
+.btn-ghost:hover,
+.btn-ghost:active{
+    transition:color 0.3s, background-color 0.3s;
+}
+
+/*---------HEADER----------*/
+
+.main-nav{
+    float: right;
+    margin-top: 60px;
+}
+.logo{
+    height: 50px;
+    width: auto;
+    float: left;
+    margin-top: 30px;
+}
+.main-nav li{
+    display: inline-block;
+    margin-left: 40px;
+    list-style: none;
+}
+.main-nav li a:link,
+.main-nav li a:visited{
+    color: white;
+    padding-bottom: 8px;
+    text-decoration: none;
+    text-transform: uppercase; 
+    border-bottom: 2px solid transparent;    
+}
+.main-nav li a:hover,
+.main-nav li a:active{
+   border-bottom: 1px solid #f1bc0f;  
+   transition: border-bottm 0.3s;
+}
+
+/*---------SLIDE-SHOW----------*/
+
+.carousel {
+    position: relative;
+    height: 700px;
+    width: 80%;
+    margin: 0 auto;
+}
+.carousel__track-container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+}
+.carousel__track-container{
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.315);
+}
+.carousel__track{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    position: relative;
+    height: 100%;
+    transition: transform 1.5s ease;
+}
+.carousel__slide{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+}
+.carousel__button{
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+}
+.carousel__button--left{
+    left: -50px;
+}
+.carousel__button--right{
+    right: -50px;
+}
+.carousel__button img{
+    height: 50px;
+    
+}
+.carousel__nav{
+    padding: 30px 0;
+    display: flex;
+    justify-content: center;
+}
+.carousel__indicator{
+    height: 11px;
+    width: 11px;
+    border-radius: 50px;
+    border: 0;
+    background: rgba(0, 0, 0, 0.158);
+    margin: 0 10px;
+    cursor: pointer;
+    
+}
+.carousel__indicator.current-slide{
+    background: #f1bc0f;
+    transition: background 0.5s ; 
+}
+
+/*---------INFO-SECTION----------*/
+
+.row-info{
+    margin-top: 60px ;
+}
+.section-info p{
+    padding: 0 20px;
+    
+}
+
+/*-----------CONTACT----------*/
+
+.section-contact{
+    background-color: rgba(0, 0, 0, 0.02);
+}
+.contact-form{
+    width: 60%;
+    margin: 0 auto;
+}
+
+input[type=text],
+input[type=email],
+textarea{
+    width: 100%;
+    padding: 7px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #cccccc;
+}
+textarea{
+    height: 100px;
+}
+
+*:focus{outline: none;}
