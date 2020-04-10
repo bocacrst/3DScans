@@ -113,3 +113,17 @@ const autoChange = ()=>{
 }
 
 window.onload = autoChange;
+
+/*#####################################################*/
+/*-------------------CONTACT-FORM----------------------*/
+/*#####################################################*/
+
+$(document).ready(function () {
+    $('.submit').click(function (event) {
+       // event.preventDefault()
+        console.log('Submit')
+
+        var email = $('#email').val()
+
+    })
+})
