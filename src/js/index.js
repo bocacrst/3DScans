@@ -7,12 +7,20 @@ const dotNav = document.querySelector('.carousel__nav');
 const dots = Array.from(dotNav.children);
 const slideWidth = slides[0].getBoundingClientRect().width;
 
+const firstSlide = track.querySelector('.current-slide');
+const firstDot = dotNav.querySelector('.current-slide');
+const lastSlide = track.querySelector('.last-slide');
+const lastDot = dotNav.querySelector('.last-button');
+
+var x=0;
 
 const setSlidePossition = (slide,index)=>{
+    
     slide.style.left = slideWidth * index + 'px';
 }
 
 slides.forEach(setSlidePossition);
+
 
 const moveToSlide = (track,currentSlide,targetSlide)=>{
     track.style.transform = `translateX(-${targetSlide.style.left})`;
@@ -29,10 +37,18 @@ nextBtn.addEventListener('click', e =>{
     const nextSlide = currentSlide.nextElementSibling;
     const currentDot = dotNav.querySelector('.current-slide');
     const nextDot = currentDot.nextElementSibling;
-  
-    moveToSlide(track,currentSlide,nextSlide);
-    updateDots(currentDot,nextDot);
+    x = 1;   
+    if(!nextSlide){
     
+        moveToSlide(track,currentSlide,firstSlide);
+        updateDots(currentDot, firstDot);
+
+    }else{
+        
+        moveToSlide(track,currentSlide,nextSlide);
+        updateDots(currentDot, nextDot);
+        
+    }
 })
 
 prevBtn.addEventListener('click', e =>{
@@ -40,16 +56,27 @@ prevBtn.addEventListener('click', e =>{
     const prevSlide = currentSlide.previousElementSibling;
     const currentDot = dotNav.querySelector('.current-slide');
     const prevDot = currentDot.previousElementSibling;
+    x = 1;
 
-    moveToSlide(track,currentSlide,prevSlide);
-    updateDots(currentDot, prevDot);
+    if(!prevSlide){
+      
+        moveToSlide(track,currentSlide,lastSlide);
+        updateDots(currentDot, lastDot);
+
+    }else{
+      
+        moveToSlide(track,currentSlide,prevSlide);
+        updateDots(currentDot, prevDot);
+    }
 })
 
 dotNav.addEventListener('click', e =>{
     const targetDot = e.target.closest('button');
 
-    if(!targetDot) return
+    if(!targetDot)
+    return
 
+    const currentDot = dotNav.querySelector('.current-slide');
     const currentSlide = track.querySelector('.current-slide');
     const targetIndex = dots.findIndex(dot => dot === targetDot);
     const targetSlide = slides[targetIndex];
@@ -57,7 +84,32 @@ dotNav.addEventListener('click', e =>{
     moveToSlide(track,currentSlide,targetSlide);
     updateDots(currentDot,targetDot);
     
-
-    console.log(targetIndex);
 })
 
+//-----TIMER----//
+
+const autoChange = ()=>{
+
+    if(x!=0)
+    return
+
+    const currentSlide = track.querySelector('.current-slide');
+    const nextSlide = currentSlide.nextElementSibling;
+    const currentDot = dotNav.querySelector('.current-slide');
+    const nextDot = currentDot.nextElementSibling;
+  
+    if(!nextSlide){
+    
+        moveToSlide(track,currentSlide,firstSlide);
+        updateDots(currentDot, firstDot);
+
+    }else{
+        
+        moveToSlide(track,currentSlide,nextSlide);
+        updateDots(currentDot, nextDot);   
+    }
+
+        setTimeout(autoChange,3500);
+}
+
+window.onload = autoChange;
