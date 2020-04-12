@@ -123,10 +123,10 @@ button[type=submit]:active{
 
 .main-nav{
     float: right;
-    margin-top: 47px;
+    margin-top: 70px;
 }
 .logo-white{
-    height: 50px;
+    height: 70px;
     width: auto;
     float: left;
     margin-top: 30px;
@@ -154,7 +154,7 @@ button[type=submit]:active{
 .main-nav li a:hover,
 .main-nav li a:active{
    border-bottom: 1px solid #f1bc0f;  
-   transition: border-bottm 0.3s;
+   transition: border-bottom 0.3s;
 }
 .sticky{
     position: fixed;
@@ -165,13 +165,17 @@ button[type=submit]:active{
     box-shadow: 0 2px 2px #0000003d;
     z-index: 999;
 }
+.sticky .main-nav li a:hover,
+.sticky .main-nav li a:active{
+   border-bottom: 2px solid #f1bc0f;  
+}
 .sticky .main-nav{
     margin-top: 25px;
     
 }
 .sticky .main-nav li a:link,
 .sticky .main-nav li a:visited{
-    padding: 20px 0;
+    padding: 19px 0;
     color: #555555;
 }
 .sticky .logo-black{display: block;
