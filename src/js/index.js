@@ -133,14 +133,17 @@ $(document).ready(function () {
 /*#####################################################*/
 
 $(document).ready(function(){
+   
     $('.js--section-slider').waypoint(function(direction){
         if(direction == 'down'){
-            $('.nav').addClass('sticky');
+            $('nav').addClass('sticky');
             
         }else{
-            $('.nav').removeClass('sticky');
+            $('nav').removeClass('sticky');
         }
 
+    },{
+        offset: '200px;'
     });
     
 });

@@ -123,7 +123,7 @@ button[type=submit]:active{
 
 .main-nav{
     float: right;
-    margin-top: 60px;
+    margin-top: 47px;
 }
 .logo-white{
     height: 50px;
@@ -163,6 +163,7 @@ button[type=submit]:active{
     width: 100%;
     background-color: rgba(255, 255, 255, 0.95);
     box-shadow: 0 2px 2px #0000003d;
+    z-index: 999;
 }
 .sticky .main-nav{
     margin-top: 25px;
