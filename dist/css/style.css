@@ -125,11 +125,18 @@ button[type=submit]:active{
     float: right;
     margin-top: 60px;
 }
-.logo{
+.logo-white{
     height: 50px;
     width: auto;
     float: left;
     margin-top: 30px;
+}
+.logo-black{
+    display: none;
+    height: 50px;
+    width: auto;
+    float: left;
+    margin: 10px 0;
 }
 .main-nav li{
     display: inline-block;
@@ -139,7 +146,7 @@ button[type=submit]:active{
 .main-nav li a:link,
 .main-nav li a:visited{
     color: white;
-    padding-bottom: 8px;
+    padding: 8px 0;
     text-decoration: none;
     text-transform: uppercase; 
     border-bottom: 2px solid transparent;    
@@ -149,6 +156,26 @@ button[type=submit]:active{
    border-bottom: 1px solid #f1bc0f;  
    transition: border-bottm 0.3s;
 }
+.sticky{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 2px 2px #0000003d;
+}
+.sticky .main-nav{
+    margin-top: 25px;
+    
+}
+.sticky .main-nav li a:link,
+.sticky .main-nav li a:visited{
+    padding: 20px 0;
+    color: #555555;
+}
+.sticky .logo-black{display: block;
+}
+.sticky .logo-white{display: none;}
 
 /*---------SLIDE-SHOW----------*/
 
@@ -224,9 +251,6 @@ button[type=submit]:active{
 
 /*---------INFO-SECTION----------*/
 
-.row-info{
-    margin-top: 60px ;
-}
 .section-info p{
     padding: 0 20px;
     
