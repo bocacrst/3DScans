@@ -114,45 +114,62 @@ const autoChange = ()=>{
 
 window.onload = autoChange;
 
-/*#####################################################*/
-/*-------------------CONTACT-FORM----------------------*/
-/*#####################################################*/
 
 $(document).ready(function () {
+
+    /*#####################################################*/
+    /*-------------------CONTACT-FORM----------------------*/
+    /*#####################################################*/
+
+
     $('.submit').click(function (event) {
-       // event.preventDefault()
+    // event.preventDefault()
         console.log('Submit')
 
         var email = $('#email').val()
 
     })
-})
 
-/*#####################################################*/
-/*-------------------CONTACT-FORM----------------------*/
-/*#####################################################*/
 
-$(document).ready(function(){
-   
+    /*#####################################################*/
+    /*---------------------NAVIGATION----------------------*/
+    /*#####################################################*/
+
+
+    
     $('.js--section-slider').waypoint(function(direction){
         if(direction == 'down'){
             $('nav').addClass('sticky');
             
+            
         }else{
             $('nav').removeClass('sticky');
+
         }
 
     },{
-        offset: '200px;'
+        offset: '80px;'
     });
+        
     
-});
-/*
 
-var waypoints = $('#handler-first').waypoint(function(direction) {
-  notify(this.element.id + ' hit 25% from top of window') 
-}, {
-  offset: '25%'
+    /*#####################################################*/
+    /*-----------------------BUTTONS-----------------------*/
+    /*#####################################################*/
+
+
+    $('.js--scroll-to-info').click(function () {
+        $('html, body').animate({scrollTop: $('.js--section-info').offset().top}, 1000); 
+    });
+
+    $('.js--scroll-to-slider').click(function () {
+        $('html, body').animate({scrollTop: $('.js--section-slider').offset().top}, 1000); 
+    });
+
+    $('.js--scroll-to-contact').click(function () {
+        $('html, body').animate({scrollTop: $('.js--section-contact').offset().top}, 1000); 
+    });
+
 })
 
-*/
+

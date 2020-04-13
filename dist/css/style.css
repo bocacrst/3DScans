@@ -27,6 +27,7 @@ header{
     background-size: cover;
     background-position: center;
     height: 100vh;
+    background-attachment: fixed;
 }
 .hero-text{
     position: absolute;
@@ -123,7 +124,7 @@ button[type=submit]:active{
 
 .main-nav{
     float: right;
-    margin-top: 70px;
+    margin-top: 66px;
 }
 .logo-white{
     height: 70px;
@@ -154,7 +155,7 @@ button[type=submit]:active{
 .main-nav li a:hover,
 .main-nav li a:active{
    border-bottom: 1px solid #f1bc0f;  
-   transition: border-bottom 0.3s;
+   transition: border-bottom 300ms;
 }
 .sticky{
     position: fixed;
@@ -164,7 +165,9 @@ button[type=submit]:active{
     background-color: rgba(255, 255, 255, 0.95);
     box-shadow: 0 2px 2px #0000003d;
     z-index: 999;
+    transition: background-color, 150ms ease-in;
 }
+
 .sticky .main-nav li a:hover,
 .sticky .main-nav li a:active{
    border-bottom: 2px solid #f1bc0f;  
