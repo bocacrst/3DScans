@@ -148,7 +148,7 @@ $(document).ready(function () {
         }
 
     },{
-        offset: '80px;'
+        offset: '850px;'
     });
         
     
