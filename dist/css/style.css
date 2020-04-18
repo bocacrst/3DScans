@@ -23,7 +23,7 @@ section{
 /*---------HEADINGS----------*/
 
 header{
-    background-image: linear-gradient(rgb(0,0,0,0.73),rgb(0,0,0,0.73)), url(../img/alberto-castillo-q-mx4mSkK9zeo-unsplash.jpg);
+    background-image: linear-gradient(rgb(0,0,0,0.73) 65%,rgba(66, 54, 4, 0.73)), url(../img/RealEstate/MP_RealEstate_3.jpg);
     background-size: cover;
     background-position: center;
     height: 100vh;

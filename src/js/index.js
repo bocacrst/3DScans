@@ -170,6 +170,7 @@ $(document).ready(function () {
         $('html, body').animate({scrollTop: $('.js--section-contact').offset().top}, 1000); 
     });
 
-})
+});
+
 
 
